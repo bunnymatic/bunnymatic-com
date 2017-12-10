@@ -19,5 +19,11 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-import bunnymatic_com from "./bunnymatic_com"
-bunnymatic_com()
+import React from 'react';
+import ReactDOM from 'react-dom';
+import BunnymaticApp from "./bunnymatic/bunnymaticApp"
+
+ReactDOM.render(
+    <BunnymaticApp />,
+  document.getElementById('app')
+);

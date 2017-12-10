@@ -30,14 +30,15 @@ conventions: {
 
   plugins: {
     babel: {
-      ignore: [/web\/static\/vendor/]
+      ignore: [/web\/static\/vendor/],
+      presets: [ "es2015", "react" ]
     },
     copycat: {
-      "fonts": ["node_modules/bootstrap-sass/assets/fonts/bootstrap"] // copy node_modules/bootstrap-sass/assets/fonts/bootstrap/* to priv/static/fonts/
+      // "fonts": ["node_modules/bootstrap-sass/assets/fonts/bootstrap"] // copy node_modules/bootstrap-sass/assets/fonts/bootstrap/* to priv/static/fonts/
     },
     sass: {
       options: {
-        includePaths: ["node_modules/bootstrap-sass/assets/stylesheets"], // tell sass-brunch where to look for files to @import
+        // includePaths: ["node_modules/bootstrap-sass/assets/stylesheets"], // tell sass-brunch where to look for files to @import
         precision: 8 // minimum precision required by bootstrap-sass
       }
     }
@@ -52,9 +53,9 @@ conventions: {
   npm: {
     enabled: true,
     globals: { // bootstrap-sass' JavaScript requires both '$' and 'jQuery' in global scope
-      $: 'jquery',
-      jQuery: 'jquery',
-      bootstrap: 'bootstrap-sass' // require bootstrap-sass' JavaScript globally
+      //$: 'jquery',
+      //jQuery: 'jquery',
+      //bootstrap: 'bootstrap-sass' // require bootstrap-sass' JavaScript globally
     }
   }
 }
