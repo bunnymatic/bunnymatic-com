@@ -38,8 +38,8 @@ conventions: {
     },
     sass: {
       options: {
-        // includePaths: ["node_modules/bootstrap-sass/assets/stylesheets"], // tell sass-brunch where to look for files to @import
-        precision: 8 // minimum precision required by bootstrap-sass
+        includePaths: ["node_modules/ceaser-easing"],
+        globDeps: true
       }
     }
   },

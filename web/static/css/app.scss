@@ -1,6 +1,41 @@
-$icon-font-path: "/fonts/"; /* use fonts from priv/static/fonts/ */
-body {
-    padding-top: 65px;
+@import "reset";
+@import "variables/**/*.scss";
+@import "modules/**/*.scss";
+@import "pages/**/*.scss";
+
+
+/** push footer */
+
+$footer-height: 0;
+
+html {
+  height: 100%;
+}
+body, #app {
+  position: relative;
+  padding-bottom: $footer-height;
+  height: 100%;
 }
 
-@import "bunnymatic_com";
+#app, .app-container {
+  height: 100%;
+}
+
+.app-container {
+  display: flex;
+  justify-content: stretch;
+  background-color: $orange-1;
+}
+
+.app-container > div {
+}
+
+
+/** links */
+
+a {
+  color: $dark-purple;
+  &:hover, &:visited, &:active {
+    color: $dark-purple;
+  }
+}

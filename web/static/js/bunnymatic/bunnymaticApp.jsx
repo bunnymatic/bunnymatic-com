@@ -1,8 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Navigation from './navigation';
+import Main from './pages/main';
 
 class BunnymaticApp extends Component {
   render() {
-    return(<div>Here we go</div>);
+    return(
+      <div className="app-container">
+        <Navigation />
+        <Main />
+      </div>
+    );
   }
 }
 
